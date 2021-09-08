@@ -43,7 +43,6 @@ public class Lab1
 
         double ft = 0;
         double dm = 0; 
->>>>>>> 15c9022e6fac7d6f482cf54f28b9378419753a82
         
         /**
         @exception InputMismatchException введен некорректный тип данных 
