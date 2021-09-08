@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"src","c":"Lab1","l":"controller()"},{"p":"src","c":"Lab1","l":"Lab1()","url":"%3Cinit%3E()"},{"p":"src","c":"Lab1","l":"main(String[])","url":"main(java.lang.String[])"},{"p":"src","c":"Lab1","l":"model(double, double)","url":"model(double,double)"},{"p":"src","c":"Lab1","l":"view(String)","url":"view(java.lang.String)"}]

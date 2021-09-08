@@ -1,91 +1,117 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package src;
 
 import java.io.*; //Подключаем пакеты java.io
 import java.util.*; //Подключаем пакеты java.util
 
 /**
- *
- * @author aleksandrtegin
- */
+*
+* @author Александр
+* @version 0.0.1
+*/
+
 public class Lab1 
-{
-/**
-* C метода main начинается выполнение программы
-* @param args аргументы командной сроки
-*/   
-    public static void main(String[] args)
-    {
-        System.out.println("Приступим к решению квадратного уравнения типа ax^2 + bx + c = 0 \n");
-        
+{ 
+	
+  /**
+  * Метод model принимает количсетво метров и сантиметров и вычисляет кол-во футов и дюймов
+  * @param m_value колличество метров посчитанного в методе controller
+  * @param sm_value колличество сантиметров посчитанного в методе controller
+  */
+
+	public static void model(double m_value, double sm_value)
+	{
+
+    /**
+    * @param Result итоговая строка
+    * @param valueOfsm общее количество сантиметров
+    * @param sm колличество введенных сантиметров
+    * @param m колличество введенных метров
+    * @param ft колличество футов
+    * @param dm колличество дюймов
+    */
+		String Result;
+		
+		double m = m_value;
+		double sm = sm_value;
+		
+		double valueOfsm = 0;
+		
+		double ft = 0;
+		double dm = 0; 
+		
+		valueOfsm = (m * 100) + sm;
+		
+	    dm = valueOfsm / 2.54;
+	        
+	    do 
+	    {
+	    	dm = dm -12;
+	    	ft++;
+	    }
+	    while ( (dm/12)  >= 1);   
+
+	    Result = "\n Ft: " + ft + "\t Dm: " + dm + "\n";
+	    view(Result);
+	}
+	
+  /**
+  * Метод view - выводит на устройство вывода строку
+  * @param Result передаем строку для печати
+  */
+	public static void view(String Result) 
+	{
+		System.out.println(Result);
+	}
+	
+  /**
+  * Метод controller - получает данные из командной строки и проверяет их на корректность введенного типа данных  
+  * @param args аргументы командной строки
+  */
+
+	public static void controller()
+	{
+
+    /**
+    * @param CorrectValues аргумент булевского типа для проверки введенного значения на корректный тип
+    * @param sm колличество введенных сантиметров
+    * @param m колличество введенных метров
+    */
+    boolean CorrectValues;
+    
+      Scanner sc = new Scanner(System.in);
+
+        double sm = 0;
+        double m = 0;
         
         /**
-        * @param CorrectValuse переменная булевского типа для проверки корректного ввода данных
-        * @param a коэффициент при x^2  
-        * @param b коэффициент при x
-        * @param c свободный член уравнения
-        * @param diskr дискриминант квадратного уравнения
-        * @param x1 первый корень квадратного уравнения 
-        * @param x2 второй корень квадратного уравенния 
+        @exception InputMismatchException введен некорректный тип данных 
         */
-        
-        boolean CorrectValues;
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        
-        int diskr = 0;
-        
-        double x1 = 0;
-        double x2 = 0;
-        
-        /**
-        * В данном блоке проходит проверка на корректный ввод данных
-        * @exception InputMismatchException При вводе данных неверного типа.
-        * @see InputMismatchException
-        */
-        
         do
         {
             try 
             {
                 CorrectValues = true;
-                System.out.println("Введите коэфициенты a,b и c :");
-                Scanner sc = new Scanner(System.in);
-                System.out.println("a -> ");
-                a = sc.nextInt();
-                System.out.println("b -> ");
-                b = sc.nextInt();
-                System.out.println("c -> ");
-                c = sc.nextInt();
+                view("Введите колличество м и см для перевода величины :");
+                view("M -> ");
+                m = sc.nextDouble();
+                view("Sm -> ");
+                sm = sc.nextDouble();
             }
             catch (InputMismatchException e)
                     {
                         CorrectValues = false;
-                        System.out.println("\nВводить необходимо только цифры! \nПопробуйте ещё раз\n");
+                        view("\nВводить необходимо только цифры! \nПопробуйте ещё раз\n");
+                        sc.nextLine();
                     }
         }
         while (!CorrectValues);
         
-        // Вычисление дискриминанта 
-        diskr = (b*b) - 4*(a*c);
-        System.out.print("\nДискриминант D = " + diskr + "\n");
-       
-        // Блок if-else вычисления корней квадратных уравнений
-        if (diskr < 0 || a == 0)
-        {
-            System.out.println("\nУ квадратного уравнения с данными коэффициентами нет корней");
-        }
-        else
-        {
-            System.out.println("\nКорни квадратного уравнения : \n");
-            x1 = (-b  + Math.sqrt(diskr)) / (2*a); 
-            x2 = (-b  - Math.sqrt(diskr)) / (2*a);
-            System.out.println("x1 = " + x1 + " \t x2 = " + x2);
-        }
-    }
+        model(m,sm);
+	}
+	
+	public static void main(String[] args)
+	{
+	controller();
+	}
+
 }
