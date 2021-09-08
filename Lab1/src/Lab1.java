@@ -1,3 +1,8 @@
+/*
+* To change this license header, choose License Headers in Project Properties.
+* To change this template file, choose Tools | Templates
+* and open the template in the editor.
+*/
 package src;
 
 import java.io.*; //Подключаем пакеты java.io
@@ -10,78 +15,105 @@ import java.util.*; //Подключаем пакеты java.util
 */
 
 public class Lab1 
-{
-/**
-* C метода main начинается выполнение программы
-* @param args аргументы командной сроки
-*/   
-    public static void main(String[] args)
-    {
-        System.out.println("Приступим к переводу м и см в фут и дюймы \n");
-        
-        
-        /**
-        * @param CorrectValuse переменная булевского типа для проверки корректного ввода данных
-        * @param a коэффициент при x^2  
-        * @param b коэффициент при x
-        * @param c свободный член уравнения
-        * @param diskr дискриминант квадратного уравнения
-        * @param x1 первый корень квадратного уравнения 
-        * @param x2 второй корень квадратного уравенния 
-        */
-        
-        boolean CorrectValues;
+{ 
+   /**
+   * Метод model принимает количсетво метров и сантиметров и вычисляет кол-во футов и дюймов
+   * @param m_value колличество метров посчитанного в методе controller
+   * @param sm_value колличество сантиметров посчитанного в методе controller
+   */
 
-        String temp;
+ 	public static void model(double m_value)
+ 	{
+     /**
+     * @param Result итоговая строка
+     * @param valueOfsm общее количество сантиметров
+     * @param sm колличество введенных сантиметров
+     * @param m колличество введенных метров
+     * @param ft колличество футов
+     * @param dm колличество дюймов
+     */
+        
+ 		String Result;
+
+ 		double m = m_value;
+
+ 		double valueOfsm = 0;
+
+ 		double ft = 0;
+ 		double dm = 0; 
+
+ 		valueOfsm = (m * 100);
+
+ 	    dm = valueOfsm / 2.54;
+
+ 	    do 
+ 	    {
+ 	    	dm = dm -12;
+ 	    	ft++;
+ 	    }
+ 	    while ( (dm/12)  >= 1);   
+
+ 	    Result = "\n Ft: " + ft + "\t Dm: " + dm + "\n";
+ 	    view(Result);
+ 	}
+
+   /**
+   * Метод view - выводит на устройство вывода строку
+   * @param Result передаем строку для печати
+   */
+    
+ 	public static void view(String Result) 
+ 	{
+ 		System.out.println(Result);
+ 	}
+
+   /**
+   * Метод controller - получает данные из командной строки и проверяет их на корректность введенного типа данных  
+   * @param args аргументы командной строки
+   */
+
+ 	public static void controller()
+ 	{
+
+     /**
+     * @param CorrectValues аргумент булевского типа для проверки введенного значения на корректный тип
+     * @param sm колличество введенных сантиметров
+     * @param m колличество введенных метров
+     */
+        
+     boolean CorrectValues;
+        
         Scanner sc = new Scanner(System.in);
-        String Result;
-
-        double sm = 0;
+        
         double m = 0;
-
-        double valueOfsm = 0;
-
-        double ft = 0;
-        double dm = 0; 
-        
         /**
-        @exception InputMismatchException введен некорректный тип данных 
-        */
+         * В данном блоке проходит проверка на корректный ввод данных
+         * @exception InputMismatchException введен некорректный тип данных 
+         */
+        
         do
-        {
-            try 
-            {
-                CorrectValues = true;
+         {
+             try 
+             {
+                 CorrectValues = true;
+                 view("Введите колличество м для перевода величины из м и см в фт и дюймы: ");
+                 view("Metres -> ");
+                 m = sc.nextDouble();
+             }
+             catch (InputMismatchException e)
+                     {
+                         CorrectValues = false;
+                         view("\nВводить необходимо только цифры! \nПопробуйте ещё раз\n");
+                         sc.nextLine();
+                     }
+         }
+         while (!CorrectValues)ж
+             
+         model(m);
+ 	}
 
-                System.out.println("Введите колличество м и см для перевода величины :");
-                System.out.println("M -> ");
-                m = sc.nextDouble();
-                System.out.println("Sm -> ");
-                sm = sc.nextDouble();
-            }
-            catch (InputMismatchException e)
-                    {
-                        CorrectValues = false;
-                        view("\nВводить необходимо только цифры! \nПопробуйте ещё раз\n");
-                        sc.nextLine();
-                    }
-        }
-        while (!CorrectValues);
-
-        valueOfsm = (m * 100) + sm;
-        
-
-
-        dm = valueOfsm / 2.54;
-        
-        do 
-        {
-        	dm = dm -12;
-        	ft++;
-        }
-        while ( (dm/12)  >= 1);   
-
-        Result = "\n Ft: " + ft + "\t Dm: " + dm + "\n";
-        System.out.println(Result);
-    }
-}
+ 	public static void main(String[] args)
+ 	{
+ 	controller();
+ 	}
+ }
