@@ -20,7 +20,7 @@ public class Lab1
 */   
     public static void main(String[] args)
     {
-        System.out.println("Приступим к решению квадратного уравнения типа ax^2 + bx + c = 0 \n");
+        System.out.println("Приступим к переводу м и см в фут и дюймы \n");
         
         
         /**
@@ -34,14 +34,18 @@ public class Lab1
         */
         
         boolean CorrectValues;
-        int a = 0;
-        int b = 0;
-        int c = 0;
-        
-        int diskr = 0;
-        
-        double x1 = 0;
-        double x2 = 0;
+
+        String temp;
+        Scanner sc = new Scanner(System.in);
+        String Result;
+
+        double sm = 0;
+        double m = 0;
+
+        double valueOfsm = 0;
+
+        double ft = 0;
+        double dm = 0; 
         
         /**
         * В данном блоке проходит проверка на корректный ввод данных
@@ -54,14 +58,11 @@ public class Lab1
             try 
             {
                 CorrectValues = true;
-                System.out.println("Введите коэфициенты a,b и c :");
-                Scanner sc = new Scanner(System.in);
-                System.out.println("a -> ");
-                a = sc.nextInt();
-                System.out.println("b -> ");
-                b = sc.nextInt();
-                System.out.println("c -> ");
-                c = sc.nextInt();
+                System.out.println("Введите колличество м и см для перевода величины :");
+                System.out.println("M -> ");
+                m = sc.nextDouble();
+                System.out.println("Sm -> ");
+                sm = sc.nextDouble();
             }
             catch (InputMismatchException e)
                     {
@@ -70,22 +71,20 @@ public class Lab1
                     }
         }
         while (!CorrectValues);
+
+        valueOfsm = (m * 100) + sm;
         
-        // Вычисление дискриминанта 
-        diskr = (b*b) - 4*(a*c);
-        System.out.print("\nДискриминант D = " + diskr + "\n");
-       
-        // Блок if-else вычисления корней квадратных уравнений
-        if (diskr < 0 || a == 0)
+
+        dm = valueOfsm / 2.54;
+        
+        do 
         {
-            System.out.println("\nУ квадратного уравнения с данными коэффициентами нет корней");
+        	dm = dm -12;
+        	ft++;
         }
-        else
-        {
-            System.out.println("\nКорни квадратного уравнения : \n");
-            x1 = (-b  + Math.sqrt(diskr)) / (2*a); 
-            x2 = (-b  - Math.sqrt(diskr)) / (2*a);
-            System.out.println("x1 = " + x1 + " \t x2 = " + x2);
-        }
+        while ( (dm/12)  >= 1);   
+
+        Result = "\n Ft: " + ft + "\t Dm: " + dm + "\n";
+        System.out.println(Result);
     }
 }
