@@ -19,7 +19,6 @@ public class Lab1
    /**
    * Метод model принимает количсетво метров и сантиметров и вычисляет кол-во футов и дюймов
    * @param m_value колличество метров посчитанного в методе controller
-   * @param sm_value колличество сантиметров посчитанного в методе controller
    */
 
  	public static void model(double m_value)
@@ -68,8 +67,7 @@ public class Lab1
  	}
 
    /**
-   * Метод controller - получает данные из командной строки и проверяет их на корректность введенного типа данных  
-   * @param args аргументы командной строки
+   * Метод controller - получает данные из командной строки и проверяет их на корректность введенного типа данных
    */
 
  	public static void controller()
@@ -107,7 +105,7 @@ public class Lab1
                          sc.nextLine();
                      }
          }
-         while (!CorrectValues)ж
+         while (!CorrectValues);
              
          model(m);
  	}
