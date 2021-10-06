@@ -1,0 +1,20 @@
+Oct 06, 2021 11:57:41 AM Lab3.Lab3 main
+INFO: DebugMode changed totrue
+Oct 06, 2021 11:57:47 AM Lab3.Lab3 main
+INFO: Exit of programm
+Oct 06, 2021 12:02:34 PM Lab3.Lab3 main
+INFO: DebugMode changed to true
+Oct 06, 2021 12:02:39 PM Lab3.Lab3 main
+INFO: Exit of programm
+Oct 06, 2021 12:03:58 PM Lab3.Lab3 main
+INFO: DebugMode changed to true
+Oct 06, 2021 12:04:03 PM Lab3.Lab3 main
+INFO: Input our database
+Oct 06, 2021 12:04:03 PM Lab3.Lab3 main
+SEVERE: Exception /home/runner/MIETJava/Lab3/WagonObjects.txt (No such file or directory)
+Oct 06, 2021 12:04:03 PM Lab3.Lab3 main
+SEVERE: Exception /home/runner/MIETJava/Lab3/ProductObjects.txt (No such file or directory)
+Oct 06, 2021 12:04:09 PM Lab3.Lab3 main
+INFO: Output our database
+Oct 06, 2021 12:04:16 PM Lab3.Lab3 main
+INFO: Exit of programm
