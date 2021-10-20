@@ -4,7 +4,7 @@ import static Lab3.CheckFunctions.IntCheck;
 import java.io.*;
 
 /** 
- * Класс вагона с машинами со свойствами <b>car_possible_count</b>.
+ * Класс вагона со свойствами <b>car_possible_count</b>.
  * @autor Тегин Александр
  * @version 1.0
 */
