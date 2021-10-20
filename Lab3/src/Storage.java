@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package Lab3;
 
 import static Lab3.CheckFunctions.IntCheck;
@@ -25,46 +24,20 @@ public class Storage implements Serializable
      * Процедура определения адресса склада {@link Storage#storage_adress}
      * @param number - адресс склада
      */
-=======
- /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Lab3;
-
-import java.util.*;
-import java.io.*;
-/**
- *
- * @author aleksandrtegin
- */
-
-public class Storage implements Serializable{
-    
-    private String storage_adress;
-    private double storage_area;
-    private Product[] product_list = new Product [100];
-    
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public void setStorageAdress (String storage_adress_value)
     {
         this.storage_adress = storage_adress_value;
     }
-    
-<<<<<<< HEAD
+
     /**
      * Процедура площади склада {@link Storage#storage_area}
      * @param number - площадь склада
      */
-=======
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public void setStorageArea (double storage_area_value)
     {
         this.storage_area = storage_area_value;
     }
     
-<<<<<<< HEAD
     /**
      * Процедура определения списка продуктов {@link Storage#product_list_value}
      * @param number - список продуктов
@@ -81,33 +54,20 @@ public class Storage implements Serializable{
      * Функция получения значения поля {@link Storage#storage_adress}
      * @return адресс склада
      */
-=======
-    public void setProductList (Product[] product_list_value)
-    {
-        this.product_list = Arrays.copyOf(this.product_list,product_list_value.length);
-        for (int i = 0; i < product_list_value.length; i++)
-            this.product_list [i] = product_list_value[i];
-    }
-    
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public String getStorageAdress ()
     {
         return storage_adress;
     }
-    
-<<<<<<< HEAD
+
     /**
      * Функция получения значения поля {@link Storage#storage_adress}
      * @return площадь склада
      */
-=======
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public double getStorageArea ()
     {
         return storage_area;
     }
     
-<<<<<<< HEAD
     /**
      * Функция получения значения поля {@link Storage#storage_adress}
      * @return список продуктов
@@ -318,14 +278,6 @@ public class Storage implements Serializable{
     }
     
     protected Storage (String strg_ad_v, double strg_a_v, ArrayList<Product> prod_l_v)
-=======
-    public Product[] getProductList ()
-    {
-        return product_list;
-    }
-    
-    protected Storage (String strg_ad_v, double strg_a_v, Product[] prod_l_v)
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     {
         this.storage_adress = strg_ad_v;
         this.storage_area = strg_a_v;
@@ -346,8 +298,4 @@ public class Storage implements Serializable{
     {
         return "\nАдресс склада: " + storage_adress + " Площадь склада: " + storage_area + "\n";
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
