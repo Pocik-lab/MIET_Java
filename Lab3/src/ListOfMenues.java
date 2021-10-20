@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package Lab3;
 
 /** 
@@ -10,12 +11,28 @@ public class ListOfMenues {
     /**
      * Меню для user
      */
+=======
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Lab3;
+
+/**
+ *
+ * @author aleksandrtegin
+ */
+public class ListOfMenues {
+        
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public static void userMenu()
     {
         System.out.println("1 - Дополнить ж/д состав \n");
         System.out.println("2 - Сохранить ж/д состав \n");
         System.out.println("3 - Загрузка ж/д состава \n");
         System.out.println("4 - Печать ж/д состава \n");
+<<<<<<< HEAD
         System.out.println("5 - Изменение объектов в ж/д составе \n");
         System.out.println("6 - Удаление объектов в ж/д составе \n");
         System.out.println("7 - Выход \n");
@@ -25,12 +42,19 @@ public class ListOfMenues {
     /**
      * Меню для root
      */
+=======
+        System.out.println("5 - Выход \n");
+        System.out.println("\n-------------------------------\n");
+    }
+    
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public static void rootMenu()
     {
         System.out.println("1 - Дополнить ж/д состав \n");
         System.out.println("2 - Сохранить ж/д состав \n");
         System.out.println("3 - Загрузка ж/д состава \n");
         System.out.println("4 - Печать ж/д состава \n");
+<<<<<<< HEAD
         System.out.println("5 - Изменение объектов в ж/д составе \n");
         System.out.println("6 - Удаление объектов в ж/д составе \n");
         System.out.println("7 - Выход \n");
@@ -42,6 +66,14 @@ public class ListOfMenues {
     /**
      * Меню для загрузки вагонов
      */
+=======
+        System.out.println("5 - Выход \n");
+        System.out.println("6 - Режим дебага \n");
+        System.out.println("7 - Режим автотестов \n");
+        System.out.println("\n-------------------------------\n");
+    }
+    
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public static void wagonLoadMenu()
     {
         System.out.println("1 - Платформа для контейнеров \n");
@@ -51,9 +83,12 @@ public class ListOfMenues {
         System.out.println("\n-------------------------------\n");
     }
     
+<<<<<<< HEAD
      /**
      * Меню для загрузки продуктов
      */
+=======
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     public static void productLoadMenu()
     {
         System.out.println("\n-------------------------------\n");
@@ -64,4 +99,8 @@ public class ListOfMenues {
         System.out.println("4 - Автомобили \n");
         System.out.println("\n-------------------------------\n");
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed

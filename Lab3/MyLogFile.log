@@ -18,6 +18,7 @@ Oct 06, 2021 12:04:09 PM Lab3.Lab3 main
 INFO: Output our database
 Oct 06, 2021 12:04:16 PM Lab3.Lab3 main
 INFO: Exit of programm
+<<<<<<< HEAD
 Oct 20, 2021 11:31:23 AM Lab3.Lab3 main
 INFO: -------Start of Log-----
 Oct 20, 2021 11:31:23 AM Lab3.Lab3 main
@@ -72,3 +73,5 @@ Oct 20, 2021 11:36:59 AM Lab3.Lab3 main
 INFO: Database print
 Oct 20, 2021 11:37:11 AM Lab3.Lab3 main
 INFO: Exit of programm
+=======
+>>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
