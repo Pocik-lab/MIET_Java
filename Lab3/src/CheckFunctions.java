@@ -79,7 +79,7 @@ public class CheckFunctions {
     
     /**
      * Процедура проверки на string
-     * @return number - корректный string
+     * @return s - корректный string
      */
     public static String StringCheck()
     {
