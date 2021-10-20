@@ -4,7 +4,7 @@ import static Lab3.CheckFunctions.*;
 import java.io.*;
 
 /** 
- * Класс продукта со свойствами <b>car_type</b> и <b>car_name</b> и <b>car_price</b>.
+ * Класс продукта со свойствами </b>car_type</b> и </b>car_name</b> и </b>car_price</b>.
  * @autor Тегин Александр
  * @version 1.0
 */
