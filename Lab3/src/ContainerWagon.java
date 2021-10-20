@@ -4,7 +4,7 @@ import static Lab3.CheckFunctions.IntCheck;
 import java.io.*;
 
 /** 
- * Класс вагона с контейнерами со свойствами <b>container_count</b>.
+ * Класс вагона со свойствами <b>container_count</b>.
  * @autor Тегин Александр
  * @version 1.0
 */
