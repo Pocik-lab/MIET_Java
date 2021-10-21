@@ -80,7 +80,7 @@ public class ProductLiquid extends Product implements Serializable
     }
 
     /**
-     * Процедура словесного описания данного продукта
+     * Процедура текстового описания данного продукта
      */
     @Override
     public String toString()
