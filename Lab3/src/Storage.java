@@ -175,6 +175,11 @@ public class Storage implements Serializable
      */
     public void storageInput(String path,boolean debug, Logger logger)
     {
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным и сбой вызова загрузки класса с использованием его строкового имени
+         * @exception IOException неверный доступ к данным
+         * @exception ClassNotFoundExceptionn сбой вызова загрузки класса с использованием его строкового имени
+         */
         try
         {
             FileInputStream fis = new FileInputStream(new File(path + "Storage.txt"));
@@ -190,11 +195,6 @@ public class Storage implements Serializable
             ois.close();
         }
         
-        /**
-         * В данном блоке проходит проверка на корректный доступ к данным и сбой вызова загрузки класса с использованием его строкового имени
-         * @exception IOException неверный доступ к данным
-         * @exception ClassNotFoundExceptionn сбой вызова загрузки класса с использованием его строкового имени
-         */
         catch (IOException | ClassNotFoundException e)
         {
             if (debug)
@@ -334,7 +334,7 @@ public class Storage implements Serializable
     }
     
      /** 
-     * Словсеное описание склада
+     * Текстовое описание склада
      */
     @Override
     public String toString()
