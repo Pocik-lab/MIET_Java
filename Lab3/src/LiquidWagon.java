@@ -15,7 +15,7 @@ public class LiquidWagon extends Wagon implements Serializable
     
     /**
      * Процедура определения объёма жидкости {@link LiquidWagon#liquid_amount}
-     * @param liquid_amount - объём жидкости
+     * @param liquid_amount_value - объём жидкости
      */
     public void setLiquidAmount(double liquid_amount_value)
     {
