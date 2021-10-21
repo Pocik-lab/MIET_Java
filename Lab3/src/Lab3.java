@@ -6,19 +6,30 @@ import java.io.*;
 import java.util.*;
 import java.util.logging.*;
 
-/**
- *
- * @author aleksandrtegin
- */
+/** 
+ * Main class программы
+ * @autor Тегин Александр
+ * @version 1.0
+*/
 public class Lab3 
 {  
+    /** Поле расположения главной директории*/
     public static final String PATH_TO_MAIN_DIR = "/Users/aleksandrtegin/Desktop/JavaLabs/Lab3/src/main/java/Lab3/";
     
+     /**
+     * main 
+     * @param args - аргументы командной строки
+     */
     public static void main(String args[]) 
     {
         Logger logger = Logger.getLogger("Lab3"); 
         FileHandler handler;  
         
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным и разрешения, необходимые для доступа к ресурсу.
+         * @exception IOException неверный доступ к данным
+         * @exception SecurityException не имеет разрешений, необходимых для доступа к ресурсу.
+         */
         try 
         {   
             boolean append = true;
@@ -35,6 +46,10 @@ public class Lab3
         FileInputStream fileInputStream;
         Properties prop = new Properties();
         
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным
+         * @exception IOException неверный доступ к данным
+         */
         try 
         {
             fileInputStream = new FileInputStream(PATH_TO_MAIN_DIR + "config.properties" );
