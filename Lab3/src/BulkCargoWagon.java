@@ -15,7 +15,7 @@ public class BulkCargoWagon extends Wagon implements Serializable
     
     /**
      * Процедура определения объема сыпучего груза {@link BulkCargoWagon#bulk_cargo_amount}
-     * @param bulk_cargo_amount - объем сыпучего груза
+     * @param bulk_cargo_amount_value - объем сыпучего груза
      */
     public void setBulkCargoAmount(double bulk_cargo_amount_value)
     {   
