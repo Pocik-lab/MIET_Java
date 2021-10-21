@@ -16,7 +16,7 @@ public class CarWagon extends Wagon implements Serializable
     
     /**
      * Процедура определения вместимости по кол-ву машин {@link CarWagon#car_possible_count}
-     * @param car_possible_count - объем сыпучего груза
+     * @param car_possible_count_value - объем сыпучего груза
      */
     public void setCarPossibleCount(int car_possible_count_value)
     {
