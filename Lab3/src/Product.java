@@ -80,7 +80,7 @@ public abstract class Product implements Serializable
     }
     
     /**
-     * Процедура словесного описания данного продукта
+     * Процедура текстового описания данного продукта
      * Абстрактный метод
      */
     @Override
