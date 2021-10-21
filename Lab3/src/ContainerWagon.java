@@ -15,7 +15,7 @@ public class ContainerWagon extends Wagon implements Serializable
     
     /**
      * Процедура определения кол-ва контейнеров {@link ContainerWagon#container_count}
-     * @param container_count - кол-во контейнеров
+     * @param container_count_value - кол-во контейнеров
      */
     public void setContainerCouunt(int container_count_value)
     {
