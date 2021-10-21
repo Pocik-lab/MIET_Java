@@ -17,7 +17,7 @@ public class ProductContainer extends Product implements Serializable
     
     /**
      * Процедура определения типа контейнера {@link ProductContainer#container_type}
-     * @param container_type - тип контейнера
+     * @param container_type_value - тип контейнера
      */
     public void setContainerType(String container_type_value)
     {
@@ -26,7 +26,7 @@ public class ProductContainer extends Product implements Serializable
     
     /**
      * Процедура определения объёма контейнера {@link ProductContainer#container_amount}
-     * @param container_amount - объем контейнера
+     * @param container_amount_value - объем контейнера
      */
     public void setContainerAmount(double container_amount_value)
     {   
