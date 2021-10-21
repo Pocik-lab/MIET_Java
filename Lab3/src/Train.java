@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package Lab3;
 
 import static Lab3.CheckFunctions.*;
@@ -6,48 +5,45 @@ import static Lab3.ListOfMenues.wagonLoadMenu;
 import java.io.*;
 import java.util.logging.*;
 import java.util.*;
-=======
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Lab3;
 
-import java.util.*;
-import static Lab3.CheckFunctions.*;
-import java.io.*;
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
-/**
- *
- * @author aleksandrtegin
- *
- */
-
-
-public class Train implements Serializable{
-    
+/** 
+ * Класс поезда со свойствами <b>train_name</b> и <b>train_length</b> и <b>wagon_list<b> и <b>wagon_And_product<b>.
+ * @autor Тегин Александр
+ * @version 1.0
+*/
+public class Train implements Serializable
+{
+    /** Поле названия поезда */
     private String train_name;
+    /** Поле длины поезда */
     private int train_length;
-<<<<<<< HEAD
+    /** Поле списка вагонов */
     private ArrayList<Wagon> wagon_list = new ArrayList<Wagon>();
+    /** Поле вагонов с продуктами */
     private HashMap<Wagon, Product> wagon_And_product = new HashMap<>();
-=======
-    private Wagon[] wagon_list = new Wagon [100];
-    private HashMap <Wagon, Product> wagon_And_product = new HashMap<>();
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     
+     /**
+     * Процедура определения названия поезда {@link Train#train_name}
+     * @param train_name_value - название поезда
+     */
     public void setTrainName (String train_name_value)
     {
         this.train_name = train_name_value;
     }
     
+     /**
+     * Процедура определения длины поезда {@link Train#train_length}
+     * @param train_length_value - длина поезда
+     */
     public void setTrainLength (int train_length_value)
     {
         this.train_length = train_length_value;
     }
-<<<<<<< HEAD
-
+    
+     /**
+     * Процедура определения списка вагонов {@link Train#wagon_list}
+     * @param wagon_list_value - список вагонов
+     */
     public void setWagonList(ArrayList<Wagon> wagon_list_value)
     {
        for(Wagon wagon: wagon_list_value)
@@ -56,21 +52,36 @@ public class Train implements Serializable{
        }
     }
     
+     /**
+     * Функция получения значения поля {@link Train#train_name}
+     * @return название поезда
+     */
     public String getTrainName ()
     {
         return train_name;
     }
     
+     /**
+     * Функция получения значения поля {@link Train#train_length}
+     * @return длина поезда
+     */
     public int getTrainLength ()
     {
         return train_length;
     }
-        
+    
+     /**
+     * Функция получения значения поля {@link Train#wagon_list}
+     * @return список вагонов
+     */
     public ArrayList<Wagon> getWagonList ()
     {
         return wagon_list;
     }
     
+     /**
+     * Функция добавления вагонов в список вагонов поезда
+     */
     public void addToWagonList()
     {
         int global_count;
@@ -121,6 +132,10 @@ public class Train implements Serializable{
         this.setTrainLength(this.wagon_list.size());
     }
     
+     /**
+     * Процедура сопоставления вагонов и их продуктов
+     * @param product_list_value - список вагонов и их продуктов
+     */
     public void setWagonAndProduct(ArrayList<Product> product_list_value)
     {
         System.out.println("Загрузим ж/д состав продукцией со склада \n");
@@ -136,30 +151,6 @@ public class Train implements Serializable{
                     {
                         System.out.println("\n-------------------------------\n");
                         System.out.println(product.toString());
-=======
-    
-    public void setWagonList (Wagon[] wagon_list_value)
-    {
-        this.wagon_list = Arrays.copyOf(this.wagon_list, wagon_list_value.length);
-        for (int i = 0; i < wagon_list_value.length; i++)
-            this.wagon_list[i] = wagon_list_value[i];
-    }
-    
-    public void setWagonAndProduct (Wagon[] wagon_list_value, Product[] product_list_value)
-    {
-        System.out.println("Загрузим ж/д состав продукцией со склада \n");
-        if (wagon_list_value.length == product_list_value.length)
-        {
-            do
-            {
-                for (int i = 0; i < product_list_value.length; i++) 
-                {
-                    int num = -1;
-                    if (!wagon_And_product.containsValue(product_list_value[i])) 
-                    {
-                        System.out.println("\n-------------------------------\n");
-                        System.out.println(product_list_value[i].toString());
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
                         System.out.println("\n-------------------------------\n");
                     } 
                     else 
@@ -167,7 +158,6 @@ public class Train implements Serializable{
                         continue;
                     }
                     
-<<<<<<< HEAD
                     for (Wagon wagon : this.wagon_list) 
                     {
                         if (!wagon_And_product.containsKey(wagon))
@@ -177,22 +167,10 @@ public class Train implements Serializable{
                             System.out.println(wagon.toString());
                             System.out.println("\n-------------------------------\n");
                             
-=======
-                    for (int j = 0; j < wagon_list_value.length; j++) 
-                    {
-                        if (!wagon_And_product.containsKey(wagon_list_value[j]))
-                        {
-                            System.out.println("Поместить продукцию в данный вагон? \n 1 - Да \n 2 - Нет \n");
-                            System.out.println("\n-------------------------------\n");
-                            System.out.println(wagon_list_value[j].toString());
-                            System.out.println("\n-------------------------------\n");
-                            boolean CorrectValues = true;
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
                             do
                             {
                                 num = IntCheck();
                             }
-<<<<<<< HEAD
                             while (num < 0 || num > 2);
                             
                             switch (num) 
@@ -205,35 +183,17 @@ public class Train implements Serializable{
                                 case(2): 
                                 {
                                     break;
-=======
-                            while (!CorrectValues && (num < 0 || num > 2));
-                            switch (num) {
-                                case(1):                                    
-                                {
-                                        this.wagon_And_product.put(wagon_list_value[j], product_list_value[i]);
-                                        j = wagon_list_value.length;
-                                }
-                                case(2): 
-                                {
-                                    j = wagon_list_value.length;
-                                    continue;
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
                                 }
                             }
                         } 
                         else 
                         {
-<<<<<<< HEAD
                             System.out.println("Вагон " + wagon.getNumber() + " занят! \n");
-=======
-                            System.out.println("Вагон " + wagon_list_value[j].getNumber() + " занят! \n");
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
                             System.out.println("\n-------------------------------\n");
                         }
                     }
                 }
             }
-<<<<<<< HEAD
             while (this.wagon_list.size() != this.wagon_And_product.size());
         }
         else if (this.wagon_list.size() > product_list_value.size())
@@ -244,38 +204,11 @@ public class Train implements Serializable{
         {
             System.out.println("Нет вагонов!\nЗагрузка невозможна");
         }
-=======
-            while (wagon_list_value.length != this.wagon_And_product.size());
-        }
-        else
-        {
-            System.out.println("Списки несоразмерны!\nЗагрузка невозможна");
-        }
-    }  
-    
-    public String getTrainName ()
-    {
-        return train_name;
     }
     
-    public int getTrainLength ()
-    {
-        return train_length;
-    }
-        
-    public Wagon[] getWagonList ()
-    {
-        return wagon_list;
-    }
-    
-    protected Train (String tr_n_v, int tr_l_v, Wagon[] wag_l_v)
-    {
-        this.train_name = tr_n_v;
-        this.train_length = tr_l_v;
-        this.wagon_list = wag_l_v;   
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
-    }
-    
+     /**
+     * Текстовое описание вагонов и их продуктов
+     */
     public void wagonAndProductToString()
     {
         System.out.println("\n-------------------------------\n");
@@ -286,15 +219,12 @@ public class Train implements Serializable{
        
         int order = 1;
        
-<<<<<<< HEAD
         if (this.wagon_And_product.size() == 0)
         {
             System.out.println("Ж/Д состав пустой!");
             System.out.println("\n-------------------------------\n");
         }
     
-=======
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
         do
         {
             for(int i = 0; i < this.wagon_And_product.size(); i++)
@@ -312,10 +242,19 @@ public class Train implements Serializable{
         }
         while (order != this.wagon_And_product.size() + 1);
     }
-<<<<<<< HEAD
     
+     /**
+     * Процедура сохранения списка вагонов поезда в файл
+     * @param path - путь к файлу сохранения
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void trainOutput(String path, boolean debug, Logger logger)
     {
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным
+         * @exception IOException неверный доступ к данным
+         */
         try
         {
             FileOutputStream fos = new FileOutputStream(new File(path + "Train.txt"));
@@ -340,8 +279,19 @@ public class Train implements Serializable{
         }
     }
     
+     /**
+     * Процедура загрузки списка вагонов в поезд из файла
+     * @param path - путь к файлу загрузки
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void trainInput(String path, boolean debug, Logger logger)  
     {
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным и сбой вызова загрузки класса с использованием его строкового имени
+         * @exception IOException неверный доступ к данным
+         * @exception ClassNotFoundExceptionn сбой вызова загрузки класса с использованием его строкового имени
+         */
         try
         {
             FileInputStream fis = new FileInputStream(new File(path + "Train.txt"));
@@ -371,6 +321,11 @@ public class Train implements Serializable{
         }
     }
     
+     /**
+     * Процедура изменения данных вагонов поезда
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void changeWagonInTrain(boolean debug, Logger logger)
     {   
         for (Wagon wag : this.wagon_list)
@@ -424,6 +379,11 @@ public class Train implements Serializable{
         }
     }
     
+     /**
+     * Процедура удаления вагонов из поезда
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void deleteWagonInTrain(boolean debug, Logger logger)
     {  
         int check_number = -1;
@@ -453,62 +413,37 @@ public class Train implements Serializable{
         }
     }
     
+     /** 
+     * Конструктор - создание нового объекта с определенными значениями
+     * @param tr_n_v - название поезда
+     * @param tr_l_v - длина поезда
+     * @param wag_l_v - список вагонов
+     */
     protected Train(String tr_n_v, int tr_l_v, ArrayList<Wagon> wag_l_v)
     {
         this.train_name = tr_n_v;
         this.train_length = tr_l_v;
         this.wagon_list = wag_l_v;   
-=======
-
-    public void changeWagon()
-    {
-        System.out.println("\n-------------------------------\n");
-        System.out.println("\nСписок ж/д состава и его продукции: \n");
-        System.out.println("\n-------------------------------\n");
-        ArrayList<Wagon> keys = new ArrayList<>(wagon_And_product.keySet());
-        ArrayList<Product> values = new ArrayList<>(wagon_And_product.values());
-       
-        int order = 1;
-       
-        do
-        {
-            for(int i = 0; i < this.wagon_And_product.size(); i++)
-            {
-                Wagon def_wagon = keys.get(i);
-                if (def_wagon.getNumber() == order)
-                {
-                    System.out.println(def_wagon.toString());
-                    Product def_prod = values.get(i);
-                    System.out.println(def_prod.toString());
-                    order++;
-                    System.out.println("\n-------------------------------\n");
-                }
-            }
-        }
-        while (order != this.wagon_And_product.size() + 1);
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
     }
     
+     /** 
+     * Перечисление всего списка вагонов
+     */
     public void listToString ()
     {
         System.out.println(this.toString());
-<<<<<<< HEAD
         for(Wagon wagon_list1 : this.wagon_list) 
-=======
-        for (Wagon wagon_list1 : this.wagon_list) 
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
         {
             System.out.println(wagon_list1.toString());
         }
     }
     
+     /** 
+     * Текстовое описание склада
+     */
     @Override
     public String toString()
     {
         return "\nНазвание поезда: " + train_name + " Длина поезда: " + train_length + "\n";
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3a9d30eac2934ed5cb1bbda21a4db3d6fa387bed
