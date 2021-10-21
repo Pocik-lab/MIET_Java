@@ -22,7 +22,7 @@ public class Storage implements Serializable
     
     /**
      * Процедура определения адресса склада {@link Storage#storage_adress}
-     * @param number - адресс склада
+     * @param storage_adress_value - адресс склада
      */
     public void setStorageAdress (String storage_adress_value)
     {
@@ -31,7 +31,7 @@ public class Storage implements Serializable
 
     /**
      * Процедура площади склада {@link Storage#storage_area}
-     * @param number - площадь склада
+     * @param storage_area_value - площадь склада
      */
     public void setStorageArea (double storage_area_value)
     {
@@ -39,8 +39,8 @@ public class Storage implements Serializable
     }
     
     /**
-     * Процедура определения списка продуктов {@link Storage#product_list_value}
-     * @param number - список продуктов
+     * Процедура определения списка продуктов {@link Storage#product_list}
+     * @param product_list_value - список продуктов
      */
     public void setProductList (ArrayList<Product> product_list_value)
     {
@@ -60,7 +60,7 @@ public class Storage implements Serializable
     }
 
     /**
-     * Функция получения значения поля {@link Storage#storage_adress}
+     * Функция получения значения поля {@link Storage#storage_area}
      * @return площадь склада
      */
     public double getStorageArea ()
@@ -69,7 +69,7 @@ public class Storage implements Serializable
     }
     
     /**
-     * Функция получения значения поля {@link Storage#storage_adress}
+     * Функция получения значения поля {@link Storage#product_list}
      * @return список продуктов
      */
     public ArrayList<Product> getProductList ()
