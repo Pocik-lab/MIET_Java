@@ -17,7 +17,7 @@ public class ProductLiquid extends Product implements Serializable
     
     /**
      * Процедура определения типа жиджкости {@link ProductLiquid#liquid_type}
-     * @param liquid_type - тип жиджкости
+     * @param liquid_type_value - тип жиджкости
      */
     public void setLiquidTupe(String liquid_type_value)
     {
@@ -26,7 +26,7 @@ public class ProductLiquid extends Product implements Serializable
 
     /**
      * Процедура определения объема жидкости  {@link ProductLiquid#liquid_liters}
-     * @param liquid_liters - объем жидкости 
+     * @param liquid_liters_value - объем жидкости 
      */
     public void setLiquidLiters(double liquid_liters_value)
     {   
