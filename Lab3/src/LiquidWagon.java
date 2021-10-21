@@ -55,7 +55,7 @@ public class LiquidWagon extends Wagon implements Serializable
     }
 
     /**
-     * Процедура словесного описания данного типа вагона
+     * Процедура текстового описания данного типа вагона
      * @return возвращает словесное описание вагона
      */
     @Override
