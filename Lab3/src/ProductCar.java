@@ -19,7 +19,7 @@ public class ProductCar extends Product implements Serializable
         
     /**
      * Процедура определения типа машины {@link ProducCar#car_type}
-     * @param car_type - тип машины
+     * @param car_type_value - тип машины
      */
     public void setCarType(String car_type_value)
     {
@@ -28,7 +28,7 @@ public class ProductCar extends Product implements Serializable
         
     /**
      * Процедура определения названия машины {@link ProductCar#car_name}
-     * @param car_name - название машины
+     * @param car_name_value - название машины
      */
     public void setCarName(String car_name_value)
     {   
@@ -37,7 +37,7 @@ public class ProductCar extends Product implements Serializable
         
     /**
      * Процедура определения стоимости машины {@link ProductCar#car_price}
-     * @param car_price - стоимость машины 
+     * @param car_price_value - стоимость машины 
      */
     public void setCarPrice(int car_price_value)
     {   
