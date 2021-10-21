@@ -20,7 +20,7 @@ public abstract class Product implements Serializable
     
     /**
      * Процедура определения ID {@link Product#special_id}
-     * @param special_id - ID
+     * @param special_id_value - ID
      */
     public void setSpecialID(int special_id_value)
     {
@@ -29,7 +29,7 @@ public abstract class Product implements Serializable
     
     /**
      * Процедура определения веса продукта {@link Product#prod_weight}
-     * @param prod_weight - вес продукта
+     * @param prod_weight_value - вес продукта
      */
     public void setProdWeight(double prod_weight_value)
     {   
