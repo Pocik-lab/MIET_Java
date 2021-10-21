@@ -17,7 +17,7 @@ public class ProductBulkCargo extends Product implements Serializable
     
     /**
      * Процедура определения типа сыпучего груза {@link ProductBulkCargo#bulk_cargo_type}
-     * @param bulk_cargo_type - тип сыпучего груза
+     * @param bulk_cargo_value - тип сыпучего груза
      */
     public void setBulkCargoType(String bulk_cargo_value)
     {
@@ -26,7 +26,7 @@ public class ProductBulkCargo extends Product implements Serializable
 
     /**
      * Процедура определения плотности груза {@link ProductBulkCargo#bulk_cargo_density}
-     * @param bulk_cargo_density - плотность груза
+     * @param bulk_cargo_density_value - плотность груза
      */
     public void setBulkCargoDensity(double bulk_cargo_density_value)
     {   
