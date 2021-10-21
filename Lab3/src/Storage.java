@@ -129,8 +129,18 @@ public class Storage implements Serializable
         System.out.println("\n-------------------------------\n");
     }
     
+     /**
+     * Процедура сохранения списка продуктов слкада в файл
+     * @param path - путь к файлу сохранения
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void storageOutput(String path,boolean debug, Logger logger)
     {
+         /**
+         * В данном блоке проходит проверка на корректный доступ к данным
+         * @exception IOException неверный доступ к данным
+         */
         try
         {
             FileOutputStream fos = new FileOutputStream(new File(path + "Storage.txt"));
@@ -157,6 +167,12 @@ public class Storage implements Serializable
         }
     }
     
+     /**
+     * Процедура загрузки списка продуктов в слкад из файла
+     * @param path - путь к файлу загрузки
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void storageInput(String path,boolean debug, Logger logger)
     {
         try
@@ -174,6 +190,11 @@ public class Storage implements Serializable
             ois.close();
         }
         
+        /**
+         * В данном блоке проходит проверка на корректный доступ к данным и сбой вызова загрузки класса с использованием его строкового имени
+         * @exception IOException неверный доступ к данным
+         * @exception ClassNotFoundExceptionn сбой вызова загрузки класса с использованием его строкового имени
+         */
         catch (IOException | ClassNotFoundException e)
         {
             if (debug)
@@ -187,6 +208,11 @@ public class Storage implements Serializable
         }
     }
     
+     /**
+     * Процедура изменения данных продукта склада
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void changeProductInTrain(boolean debug, Logger logger)
     {
         for (Product product : this.product_list)
@@ -249,6 +275,11 @@ public class Storage implements Serializable
         }
     }
     
+     /**
+     * Процедура удаления продукта со склада
+     * @param debug - логическая переменная записи в лог(писать\не писать)
+     * @param logger - лог
+     */
     public void deleteProductInStorage(boolean debug, Logger logger)
     {   
         int check_number = -1;
@@ -277,6 +308,12 @@ public class Storage implements Serializable
         }
     }
     
+     /** 
+     * Конструктор - создание нового объекта с определенными значениями
+     * @param strg_ad_v - адресс склада
+     * @param strg_a_v - площадь склада
+     * @param prod_l_v - список продуктов
+     */
     protected Storage (String strg_ad_v, double strg_a_v, ArrayList<Product> prod_l_v)
     {
         this.storage_adress = strg_ad_v;
@@ -284,6 +321,9 @@ public class Storage implements Serializable
         this.product_list = prod_l_v;
     }
     
+     /** 
+     * Перечисление всего списка продуктов
+     */
     public void listToString ()
     {
         System.out.println(this.toString());
@@ -293,6 +333,9 @@ public class Storage implements Serializable
         }
     }
     
+     /** 
+     * Словсеное описание склада
+     */
     @Override
     public String toString()
     {
