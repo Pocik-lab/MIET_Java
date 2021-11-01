@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>container_type</b> и <b>container_amount</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ProductContainer extends Product implements Serializable
