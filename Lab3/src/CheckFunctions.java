@@ -4,7 +4,7 @@ import java.util.*;
 
 /** 
  * Класс спец функций на проверку типажей.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class CheckFunctions {
