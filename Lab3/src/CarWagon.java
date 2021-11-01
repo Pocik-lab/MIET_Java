@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс вагона со свойствами <b>car_possible_count</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class CarWagon extends Wagon implements Serializable 
