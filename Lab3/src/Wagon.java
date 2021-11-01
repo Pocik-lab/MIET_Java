@@ -5,7 +5,7 @@ import static Lab3.CheckFunctions.*;
 
 /** 
  * Класс вагона со свойствами <b>serialVersionUID</b> и <b>number</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public abstract class Wagon implements Serializable 
