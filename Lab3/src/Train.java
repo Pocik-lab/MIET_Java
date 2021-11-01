@@ -7,7 +7,7 @@ import java.util.logging.*;
 import java.util.*;
 
 /** 
- * Класс поезда со свойствами <b>train_name</b> и <b>train_length</b> и <b>wagon_list<b> и <b>wagon_And_product<b>.
+ * Класс поезда со свойствами <b>train_name</b> и <b>train_length</b> и <b>wagon_list</b> и <b>wagon_And_product</b>.
  * @author Тегин Александр
  * @version 1.0
 */
