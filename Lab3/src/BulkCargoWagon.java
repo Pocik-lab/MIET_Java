@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс вагона с сыпучим грузом со свойствами <b>bulk_cargo_amount</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class BulkCargoWagon extends Wagon implements Serializable
