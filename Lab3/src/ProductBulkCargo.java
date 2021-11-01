@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>bulk_cargo_type</b> и <b>bulk_cargo_density</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ProductBulkCargo extends Product implements Serializable
