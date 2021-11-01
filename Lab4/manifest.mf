@@ -1,0 +1,2 @@
+main-class: lab4.Main
+class-path: bin/

@@ -366,7 +366,7 @@ public class Train implements Serializable
                 if (wag instanceof BulkCargoWagon)
                 {
                     BulkCargoWagon temp = new BulkCargoWagon();
-                    ((BulkCargoWagon) wag).setLiquidType(temp.getLiquidType());
+                    ((BulkCargoWagon) wag).setBulkCargoAmount(temp.getBulkCargoAmount());
                     break;
                 }
                 if (wag instanceof CarWagon)
