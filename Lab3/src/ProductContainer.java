@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>container_type</b> и <b>container_amount</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ProductContainer extends Product implements Serializable
@@ -68,8 +68,8 @@ public class ProductContainer extends Product implements Serializable
      * Конструктор - создание нового объекта с определенными значениями
      * @param spec_id_v - ID продукта
      * @param prod_w_v - вес продукта
-     * @param container_type - тип контейнера
-     * @param сontainer_amount - объем контейнера
+     * @param cont_t_v - тип контейнера
+     * @param cont_a_v - объем контейнера
      * @see ProductContainer#ProductContainer()
      */
     protected ProductContainer (int spec_id_v,double prod_w_v, String cont_t_v, double cont_a_v)

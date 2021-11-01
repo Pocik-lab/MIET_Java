@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>car_type</b> и <b>car_name</b> и <b>car_price</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ProductCar extends Product implements Serializable
@@ -18,7 +18,7 @@ public class ProductCar extends Product implements Serializable
     private int car_price;
         
     /**
-     * Процедура определения типа машины {@link ProducCar#car_type}
+     * Процедура определения типа машины {@link ProductCar#car_type}
      * @param car_type_value - тип машины
      */
     public void setCarType(String car_type_value)

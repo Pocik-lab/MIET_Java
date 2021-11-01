@@ -8,7 +8,7 @@ import java.util.logging.*;
 
 /** 
  * Main class программы
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class Lab3 

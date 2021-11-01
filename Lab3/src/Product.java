@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>serialVersionUID</b> и <b>special_id</b> и <b>prod_weight</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public abstract class Product implements Serializable 

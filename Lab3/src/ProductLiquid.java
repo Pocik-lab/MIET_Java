@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс продукта со свойствами <b>liquid_type</b> и <b>liquid_liters</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ProductLiquid extends Product implements Serializable
@@ -34,7 +34,7 @@ public class ProductLiquid extends Product implements Serializable
     }
     
     /**
-     * Функция получения значения поля {@link ProductLiquid#container_type}
+     * Функция получения значения поля {@link ProductLiquid#liquid_type}
      * @return возвращает тип жиджкости
      */
     public String getLiquidType()
@@ -43,7 +43,7 @@ public class ProductLiquid extends Product implements Serializable
     }
     
     /**
-     * Функция получения значения поля {@link ProductLiquid#container_type}
+     * Функция получения значения поля {@link ProductLiquid#liquid_liters}
      * @return возвращает объем жидкости 
      */
     public double getLiquidLiters()
@@ -68,8 +68,8 @@ public class ProductLiquid extends Product implements Serializable
      * Конструктор - создание нового объекта с определенными значениями
      * @param spec_id_v - ID продукта
      * @param prod_w_v - вес продукта
-     * @param liquid_type - тип жиджкости
-     * @param liquid_liters - объем жидкости 
+     * @param liq_t_v - тип жиджкости
+     * @param liq_l_v - объем жидкости 
      * @see ProductLiquid#ProductLiquid()
      */
     protected ProductLiquid (int spec_id_v,double prod_w_v, String liq_t_v, double liq_l_v)

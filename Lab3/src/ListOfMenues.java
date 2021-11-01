@@ -2,7 +2,7 @@ package Lab3;
 
 /** 
  * Класс вариаций меню.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ListOfMenues {

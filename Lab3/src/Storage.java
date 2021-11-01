@@ -7,8 +7,8 @@ import java.io.*;
 import java.util.logging.*;
 
 /** 
- * Класс склада со свойствами <b>storage_adress</b> и <b>storage_area</b>  и <b>product_list<b>.
- * @autor Тегин Александр
+ * Класс склада со свойствами <b>storage_adress</b> и <b>storage_area</b>  и <b>product_list</b>.
+ * @author Тегин Александр
  * @version 1.0
 */
 public class Storage implements Serializable

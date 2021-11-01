@@ -5,7 +5,7 @@ import java.io.*;
 
 /** 
  * Класс вагона со свойствами <b>container_count</b>.
- * @autor Тегин Александр
+ * @author Тегин Александр
  * @version 1.0
 */
 public class ContainerWagon extends Wagon implements Serializable
